@@ -7,12 +7,13 @@ import Code3 from "./Code3";
 import Code4 from "./Code4";
 import Code5 from "./Code5";
 import Code6 from "./Code6";
+import Code7 from "./Code7";
 
 
 function App() {
   return (
     <div>
-      <Code6/>
+      <Code7/>
     </div>
   );
 }
