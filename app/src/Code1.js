@@ -9,8 +9,6 @@ import { useState } from 'react'
 
 
 const Code1=()=>{
-    
-
 
     // eslint-disable-next-line no-unused-vars
     const [data,setdata]=useState([1,2,3,4,5])
