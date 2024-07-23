@@ -15,12 +15,13 @@ import Prototype from "./Code12";
 import CallbacksInjavascript from "./Code13";
 import CallandApplly from "./Code14";
 import Genarators from "./Code15";
+import Reducemethod from "./Code16";
 
 
 function App() {
   return (
     <div>
-      <Genarators/>
+      <Reducemethod/>
     </div>
   );
 }
