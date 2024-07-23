@@ -13,12 +13,13 @@ import Code9 from "./Code9";
 import Code10 from "./Code10";
 import Prototype from "./Code12";
 import CallbacksInjavascript from "./Code13";
+import CallandApplly from "./Code14";
 
 
 function App() {
   return (
     <div>
-      <CallbacksInjavascript/>
+      <CallandApplly/>
     </div>
   );
 }
