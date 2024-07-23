@@ -12,12 +12,13 @@ import Code8 from "./Code8";
 import Code9 from "./Code9";
 import Code10 from "./Code10";
 import Prototype from "./Code12";
+import CallbacksInjavascript from "./Code13";
 
 
 function App() {
   return (
     <div>
-      <prototype/>
+      <CallbacksInjavascript/>
     </div>
   );
 }
