@@ -11,12 +11,13 @@ import Code7 from "./Code7";
 import Code8 from "./Code8";
 import Code9 from "./Code9";
 import Code10 from "./Code10";
+import Prototype from "./Code12";
 
 
 function App() {
   return (
     <div>
-      <Code10/>
+      <prototype/>
     </div>
   );
 }
