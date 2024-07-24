@@ -1,7 +1,7 @@
 
 
 // code is written by aniket kadam
-//call backs
+//simple callbacks
 
 const Callbacks=()=>{
 

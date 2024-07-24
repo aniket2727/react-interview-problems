@@ -18,12 +18,12 @@ import Genarators from "./Code15";
 import Reducemethod from "./Code16";
 import Usecallbackhook from "./Code17";
 import Callbacks from "./Code18";
-
+import { Exporetedhoc } from "./Code19";
 
 function App() {
   return (
     <div>
-      <Callbacks/>
+      <Exporetedhoc/>
     </div>
   );
 }
