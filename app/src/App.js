@@ -16,12 +16,14 @@ import CallbacksInjavascript from "./Code13";
 import CallandApplly from "./Code14";
 import Genarators from "./Code15";
 import Reducemethod from "./Code16";
+import Usecallbackhook from "./Code17";
+import Callbacks from "./Code18";
 
 
 function App() {
   return (
     <div>
-      <Reducemethod/>
+      <Callbacks/>
     </div>
   );
 }
