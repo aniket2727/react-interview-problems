@@ -21,11 +21,11 @@ import Callbacks from "./Code18";
 import { Exporetedhoc } from "./Code19";
 import ParentComponentCustomhooks from "./Code20";
 import Childtoparent from "./Code21";
-
+import Childtoparent1 from "./Code22";
 function App() {
   return (
     <div>
-      <Childtoparent/>
+      <Childtoparent1/>
     </div>
   );
 }
