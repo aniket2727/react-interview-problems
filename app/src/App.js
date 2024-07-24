@@ -19,11 +19,12 @@ import Reducemethod from "./Code16";
 import Usecallbackhook from "./Code17";
 import Callbacks from "./Code18";
 import { Exporetedhoc } from "./Code19";
+import ParentComponentCustomhooks from "./Code20";
 
 function App() {
   return (
     <div>
-      <Exporetedhoc/>
+      <ParentComponentCustomhooks/>
     </div>
   );
 }
