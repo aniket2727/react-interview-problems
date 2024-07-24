@@ -20,11 +20,12 @@ import Usecallbackhook from "./Code17";
 import Callbacks from "./Code18";
 import { Exporetedhoc } from "./Code19";
 import ParentComponentCustomhooks from "./Code20";
+import Childtoparent from "./Code21";
 
 function App() {
   return (
     <div>
-      <ParentComponentCustomhooks/>
+      <Childtoparent/>
     </div>
   );
 }
