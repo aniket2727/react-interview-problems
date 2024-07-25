@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 
 
 // eslint-disable-next-line no-unused-vars
@@ -22,10 +23,11 @@ import { Exporetedhoc } from "./Code19";
 import ParentComponentCustomhooks from "./Code20";
 import Childtoparent from "./Code21";
 import Childtoparent1 from "./Code22";
+import Code23 from "./Code23";
 function App() {
   return (
     <div>
-      <Childtoparent1/>
+      <Code23/>
     </div>
   );
 }
