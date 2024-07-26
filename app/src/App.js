@@ -37,10 +37,11 @@ import FindSumofgivenarray from "./Code33";
 import Secondlargestelement from "./Code35";
 import SortObject from "./Code36";
 import MissingNumber from "./Code37";
+import MultipleApis from "./Code38";
 function App() {
   return (
     <div>
-      <MissingNumber/>
+      <MultipleApis/>
     </div>
   );
 }
