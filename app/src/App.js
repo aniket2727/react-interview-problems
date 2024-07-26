@@ -29,10 +29,11 @@ import Removeduplicates from "./Code25";
 import SumofAllelElement from "./Code26";
 import Largestelement from "./Code27";
 import IsarraySorted from "./Code28";
+import Concatestring from "./Code29";
 function App() {
   return (
     <div>
-      <IsarraySorted/>
+      <Concatestring/>
     </div>
   );
 }
