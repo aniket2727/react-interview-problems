@@ -27,10 +27,11 @@ import Code23 from "./Code23";
 import Reversestring from "./Code24";
 import Removeduplicates from "./Code25";
 import SumofAllelElement from "./Code26";
+import Largestelement from "./Code27";
 function App() {
   return (
     <div>
-      <SumofAllelElement/>
+      <Largestelement/>
     </div>
   );
 }
