@@ -6,24 +6,22 @@ body {
     align-items: center;     /* Vertically centers the main */
 }
 
+
 .main {
     height: 500px;
     width: 500px;
-    display: flex;
-    justify-content: center; /* Horizontally centers the child */
-    align-items: center;     /* Vertically centers the child */
+    position: relative; /* Establishes the context for absolute positioning */
     border: 1px solid red;
-    padding: 10px;  /*  pressure applied on internally */
-    /* box-sizing: border-box;  */
-   
+    padding: 10px;
 }
 
 .child {
-     
-    /* pressure from ousite */
-    /* margin: 100px; */
-    height: 100%;      /* Takes full height of the available space within main */
-    width: 100%;       /* Takes full width of the available space within main */
-    border: 1px solid blue; /* Changed color to differentiate from main */
-    box-sizing: border-box;
+    margin: -10px;
+    position: absolute; /* Absolute positioning */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the child */ 
+    height: 500px; /* Desired height */
+    width: 500px;  /* Desired width */
+    border: 1px solid blue; /* Different color for differentiation */
 }

@@ -24,10 +24,11 @@ import ParentComponentCustomhooks from "./Code20";
 import Childtoparent from "./Code21";
 import Childtoparent1 from "./Code22";
 import Code23 from "./Code23";
+import Reversestring from "./Code24";
 function App() {
   return (
     <div>
-      <Code23/>
+      <Reversestring/>
     </div>
   );
 }
