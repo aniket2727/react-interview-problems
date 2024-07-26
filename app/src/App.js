@@ -34,10 +34,12 @@ import MergeArray from "./Code30";
 import Findindex from "./Code31";
 import FlattenArray from "./Code32";
 import FindSumofgivenarray from "./Code33";
+import Secondlargestelement from "./Code35";
+
 function App() {
   return (
     <div>
-      <FindSumofgivenarray/>
+      <Secondlargestelement/>
     </div>
   );
 }
