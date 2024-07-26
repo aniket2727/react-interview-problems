@@ -26,10 +26,11 @@ import Childtoparent1 from "./Code22";
 import Code23 from "./Code23";
 import Reversestring from "./Code24";
 import Removeduplicates from "./Code25";
+import SumofAllelElement from "./Code26";
 function App() {
   return (
     <div>
-      <Removeduplicates/>
+      <SumofAllelElement/>
     </div>
   );
 }

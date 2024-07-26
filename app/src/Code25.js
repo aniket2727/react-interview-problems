@@ -9,7 +9,6 @@ const Removeduplicates=()=>{
     const handleduplicates=()=>{
         const a=[1,2,3,1,4,2]
         const arr={};
-
         a.forEach((item)=>{
             if(arr[item]){
                 arr[item]+=1;
@@ -18,12 +17,8 @@ const Removeduplicates=()=>{
                 arr[item]=1
             }
         })
-
         const result=Object.keys(arr);
         console.log(result);
-        
-
-
     }
     handleduplicates();
     return(
