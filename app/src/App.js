@@ -35,11 +35,11 @@ import Findindex from "./Code31";
 import FlattenArray from "./Code32";
 import FindSumofgivenarray from "./Code33";
 import Secondlargestelement from "./Code35";
-
+import SortObject from "./Code36";
 function App() {
   return (
     <div>
-      <Secondlargestelement/>
+      <SortObject/>
     </div>
   );
 }
