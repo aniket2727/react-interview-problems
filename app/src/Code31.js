@@ -12,10 +12,8 @@ const Findindex=()=>{
         for(let i=0;i<a.length;i++){
             if(a[i]===2){
                 console.log(i)
-
             }
         }
-
     }
     handle();
     return(
