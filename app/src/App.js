@@ -36,10 +36,11 @@ import FlattenArray from "./Code32";
 import FindSumofgivenarray from "./Code33";
 import Secondlargestelement from "./Code35";
 import SortObject from "./Code36";
+import MissingNumber from "./Code37";
 function App() {
   return (
     <div>
-      <SortObject/>
+      <MissingNumber/>
     </div>
   );
 }
