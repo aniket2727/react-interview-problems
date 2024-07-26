@@ -28,10 +28,11 @@ import Reversestring from "./Code24";
 import Removeduplicates from "./Code25";
 import SumofAllelElement from "./Code26";
 import Largestelement from "./Code27";
+import IsarraySorted from "./Code28";
 function App() {
   return (
     <div>
-      <Largestelement/>
+      <IsarraySorted/>
     </div>
   );
 }
