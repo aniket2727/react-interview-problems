@@ -32,10 +32,12 @@ import IsarraySorted from "./Code28";
 import Concatestring from "./Code29";
 import MergeArray from "./Code30";
 import Findindex from "./Code31";
+import FlattenArray from "./Code32";
+import FindSumofgivenarray from "./Code33";
 function App() {
   return (
     <div>
-      <Findindex/>
+      <FindSumofgivenarray/>
     </div>
   );
 }
