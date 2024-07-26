@@ -25,10 +25,11 @@ import Childtoparent from "./Code21";
 import Childtoparent1 from "./Code22";
 import Code23 from "./Code23";
 import Reversestring from "./Code24";
+import Removeduplicates from "./Code25";
 function App() {
   return (
     <div>
-      <Reversestring/>
+      <Removeduplicates/>
     </div>
   );
 }
