@@ -31,10 +31,11 @@ import Largestelement from "./Code27";
 import IsarraySorted from "./Code28";
 import Concatestring from "./Code29";
 import MergeArray from "./Code30";
+import Findindex from "./Code31";
 function App() {
   return (
     <div>
-      <MergeArray/>
+      <Findindex/>
     </div>
   );
 }
