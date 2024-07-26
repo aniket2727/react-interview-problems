@@ -30,10 +30,11 @@ import SumofAllelElement from "./Code26";
 import Largestelement from "./Code27";
 import IsarraySorted from "./Code28";
 import Concatestring from "./Code29";
+import MergeArray from "./Code30";
 function App() {
   return (
     <div>
-      <Concatestring/>
+      <MergeArray/>
     </div>
   );
 }
