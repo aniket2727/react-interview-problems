@@ -1,0 +1,12 @@
+{
+  "id": 1,
+  "name": "Ergonomic Wireless Mouse",
+  "description": "A wireless mouse with ergonomic design.",
+  "price": 25.99,
+  "category": "Electronics",
+  "stock": 100,
+  "ratings": {
+    "average": 4.5,
+    "reviews": 150
+  }
+}
