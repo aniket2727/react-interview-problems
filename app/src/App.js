@@ -42,10 +42,11 @@ import Copyconcept from "./Code40";
 import Objectproblems from "./Code41";
 import Recurrsion from "./Code42";
 import BalancedParenthesis from "./Code43";
+import PaginatedList from "./Code44";
 function App() {
   return (
     <div>
-      <BalancedParenthesis/>
+      <PaginatedList/>
     </div>
   );
 }
