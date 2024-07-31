@@ -39,10 +39,11 @@ import SortObject from "./Code36";
 import MissingNumber from "./Code37";
 import MultipleApis from "./Code38";
 import Copyconcept from "./Code40";
+import Objectproblems from "./Code41";
 function App() {
   return (
     <div>
-      <Copyconcept/>
+      <Objectproblems/>
     </div>
   );
 }

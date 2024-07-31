@@ -6,6 +6,8 @@
 
 const Copyconcept = () => {
 
+
+    // shallow copy
     const data = { name: "aniket", age: 24 };
     console.log("the original copy is ", data)
     const shallowcopy = data;
@@ -15,7 +17,6 @@ const Copyconcept = () => {
     console.log("the value of deep copy is ", data)
 
     //deep copy
-
     const deepcopy={...data};
     deepcopy.name="king kong";
     console.log("change in  value after deep copy",data)
