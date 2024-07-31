@@ -44,10 +44,11 @@ import Recurrsion from "./Code42";
 import BalancedParenthesis from "./Code43";
 import PaginatedList from "./Code44";
 import Formvalidations from "./Code45";
+import ListTransfer from "./Code46";
 function App() {
   return (
     <div>
-      <Formvalidations/>
+      <ListTransfer/>
     </div>
   );
 }
