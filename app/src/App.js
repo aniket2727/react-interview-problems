@@ -40,10 +40,11 @@ import MissingNumber from "./Code37";
 import MultipleApis from "./Code38";
 import Copyconcept from "./Code40";
 import Objectproblems from "./Code41";
+import Recurrsion from "./Code42";
 function App() {
   return (
     <div>
-      <Objectproblems/>
+      <Recurrsion/>
     </div>
   );
 }
