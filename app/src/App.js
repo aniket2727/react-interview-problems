@@ -41,10 +41,11 @@ import MultipleApis from "./Code38";
 import Copyconcept from "./Code40";
 import Objectproblems from "./Code41";
 import Recurrsion from "./Code42";
+import BalancedParenthesis from "./Code43";
 function App() {
   return (
     <div>
-      <Recurrsion/>
+      <BalancedParenthesis/>
     </div>
   );
 }
