@@ -38,10 +38,11 @@ import Secondlargestelement from "./Code35";
 import SortObject from "./Code36";
 import MissingNumber from "./Code37";
 import MultipleApis from "./Code38";
+import Copyconcept from "./Code40";
 function App() {
   return (
     <div>
-      <MultipleApis/>
+      <Copyconcept/>
     </div>
   );
 }
