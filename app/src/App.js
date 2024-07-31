@@ -43,10 +43,11 @@ import Objectproblems from "./Code41";
 import Recurrsion from "./Code42";
 import BalancedParenthesis from "./Code43";
 import PaginatedList from "./Code44";
+import Formvalidations from "./Code45";
 function App() {
   return (
     <div>
-      <PaginatedList/>
+      <Formvalidations/>
     </div>
   );
 }
