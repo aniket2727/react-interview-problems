@@ -47,10 +47,11 @@ import Formvalidations from "./Code45";
 import ListTransfer from "./Code46";
 import Createprogressbar from "./Code47";
 import Simpleproblems from "./Code48";
+import Removewhitespaces from "./Code49";
 function App() {
   return (
     <div>
-       <Simpleproblems/>
+       <Removewhitespaces/>
     </div>
   );
 }
