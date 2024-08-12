@@ -50,10 +50,11 @@ import Simpleproblems from "./Code48";
 import Removewhitespaces from "./Code49";
 import Factorial from "./Code50";
 import Primenumberornot from "./Code51";
+import LargestNumberinarray from "./Code53";
 function App() {
   return (
     <div>
-       <Primenumberornot/>
+       <LargestNumberinarray/>
     </div>
   );
 }
