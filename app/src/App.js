@@ -48,10 +48,11 @@ import ListTransfer from "./Code46";
 import Createprogressbar from "./Code47";
 import Simpleproblems from "./Code48";
 import Removewhitespaces from "./Code49";
+import Factorial from "./Code50";
 function App() {
   return (
     <div>
-       <Removewhitespaces/>
+       <Factorial/>
     </div>
   );
 }
