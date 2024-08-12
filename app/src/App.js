@@ -46,11 +46,11 @@ import PaginatedList from "./Code44";
 import Formvalidations from "./Code45";
 import ListTransfer from "./Code46";
 import Createprogressbar from "./Code47";
-
+import Simpleproblems from "./Code48";
 function App() {
   return (
     <div>
-      <Createprogressbar/>
+       <Simpleproblems/>
     </div>
   );
 }
