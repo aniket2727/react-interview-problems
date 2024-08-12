@@ -49,10 +49,11 @@ import Createprogressbar from "./Code47";
 import Simpleproblems from "./Code48";
 import Removewhitespaces from "./Code49";
 import Factorial from "./Code50";
+import Primenumberornot from "./Code51";
 function App() {
   return (
     <div>
-       <Factorial/>
+       <Primenumberornot/>
     </div>
   );
 }
