@@ -51,10 +51,11 @@ import Removewhitespaces from "./Code49";
 import Factorial from "./Code50";
 import Primenumberornot from "./Code51";
 import LargestNumberinarray from "./Code53";
+import Vovelproblemms from "./Code54";
 function App() {
   return (
     <div>
-       <LargestNumberinarray/>
+       <Vovelproblemms/>
     </div>
   );
 }
