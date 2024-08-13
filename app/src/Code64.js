@@ -13,7 +13,7 @@ const Findminmax=()=>{
 
     function findminmax(){
         let max=0;
-        let min=data[0];
+        var min=data[0];
 
        for(let i of data){
          if(i>max){
@@ -31,6 +31,7 @@ const Findminmax=()=>{
     return(
         <div>
            <h1>finding the min and max in arrray</h1>
+           <h1>go </h1>
         </div>
     )
 }
