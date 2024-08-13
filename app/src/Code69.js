@@ -6,7 +6,6 @@
 
 const Convertletter=()=>{
 
-
     let a="my name is aniket kadam"
     let b=a.split(' ');
    // Convert the first letter of each word to uppercase

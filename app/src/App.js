@@ -65,10 +65,11 @@ import Code66 from "./Code66";
 import Code67 from './Code67';
 import Printtable from "./Code68";
 import Convertletter from "./Code69";
+import Code70 from "./Code70";
 function App() {
   return (
     <div>
-       <Convertletter/>
+       <Code70/>
     </div>
   );
 }
