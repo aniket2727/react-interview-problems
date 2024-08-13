@@ -61,10 +61,11 @@ import Checkingdataproblems from "./Code62";
 import Passwordinput from "./Code63";
 import Findminmax from "./Code64";
 import Code65 from "./Code65";
+import Code66 from "./Code66";
 function App() {
   return (
     <div>
-       <Code65/>
+       <Code66/>
     </div>
   );
 }
