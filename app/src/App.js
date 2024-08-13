@@ -63,10 +63,11 @@ import Findminmax from "./Code64";
 import Code65 from "./Code65";
 import Code66 from "./Code66";
 import Code67 from './Code67';
+import Printtable from "./Code68";
 function App() {
   return (
     <div>
-       <Code67/>
+       <Printtable/>
     </div>
   );
 }
