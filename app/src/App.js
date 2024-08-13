@@ -59,10 +59,11 @@ import Counterinreact from "./Code60";
 import Avoiduseeffect from "./Code61";
 import Checkingdataproblems from "./Code62";
 import Passwordinput from "./Code63";
+import Findminmax from "./Code64";
 function App() {
   return (
     <div>
-       <Passwordinput/>
+       <Findminmax/>
     </div>
   );
 }
