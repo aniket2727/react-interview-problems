@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 // code is written by aniket kadam
 //Used find instead of filter to get the first matching result (since filter returns an array).
 // fiter gives all matched results
