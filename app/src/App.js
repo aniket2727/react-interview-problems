@@ -55,10 +55,11 @@ import Vovelproblemms from "./Code54";
 import Anagram from "./Code55";
 import Duplicateremove from "./Code56";
 import Longerswors from "./Code57";
+import Counterinreact from "./Code60";
 function App() {
   return (
     <div>
-       <Longerswors/>
+       <Counterinreact/>
     </div>
   );
 }
