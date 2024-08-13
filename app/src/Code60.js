@@ -3,6 +3,10 @@
 // code is written by aniket kadam
 //counter in react js
 
+
+ // This will log "Counter value: 1" immediately when the component renders.
+ //return <button onClick={handleCounter(1)}>Increment</button>;
+
 import React from 'react'
 import {useState} from 'react'
 const Counterinreact=()=>{

@@ -56,10 +56,11 @@ import Anagram from "./Code55";
 import Duplicateremove from "./Code56";
 import Longerswors from "./Code57";
 import Counterinreact from "./Code60";
+import Avoiduseeffect from "./Code61";
 function App() {
   return (
     <div>
-       <Counterinreact/>
+       <Avoiduseeffect/>
     </div>
   );
 }
