@@ -67,10 +67,11 @@ import Printtable from "./Code68";
 import Convertletter from "./Code69";
 import Code70 from "./Code70";
 import MainComponenet from "./Code71";
+import UseCustohook from "./Code72";
 function App() {
   return (
     <div>
-       <MainComponenet/>
+       <UseCustohook/>
     </div>
   );
 }
