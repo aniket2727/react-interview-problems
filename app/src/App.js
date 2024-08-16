@@ -68,10 +68,12 @@ import Convertletter from "./Code69";
 import Code70 from "./Code70";
 import MainComponenet from "./Code71";
 import UseCustohook from "./Code72";
+import Fakesteoreapis from "./Code73";
+import UseCustomHook1 from "./Code73";
 function App() {
   return (
     <div>
-       <UseCustohook/>
+       <UseCustomHook1/>
     </div>
   );
 }
