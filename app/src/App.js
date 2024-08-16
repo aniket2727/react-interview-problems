@@ -70,10 +70,11 @@ import MainComponenet from "./Code71";
 import UseCustohook from "./Code72";
 import Fakesteoreapis from "./Code73";
 import UseCustomHook1 from "./Code73";
+import Mainhoc from "./Code74";
 function App() {
   return (
     <div>
-       <UseCustomHook1/>
+       <Mainhoc/>
     </div>
   );
 }
