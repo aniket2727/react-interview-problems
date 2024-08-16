@@ -66,10 +66,11 @@ import Code67 from './Code67';
 import Printtable from "./Code68";
 import Convertletter from "./Code69";
 import Code70 from "./Code70";
+import MainComponenet from "./Code71";
 function App() {
   return (
     <div>
-       <Code70/>
+       <MainComponenet/>
     </div>
   );
 }
