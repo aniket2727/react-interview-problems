@@ -71,10 +71,11 @@ import UseCustohook from "./Code72";
 import Fakesteoreapis from "./Code73";
 import UseCustomHook1 from "./Code73";
 import Mainhoc from "./Code74";
+import Grid from "./Code75";
 function App() {
   return (
     <div>
-       <Mainhoc/>
+       <Grid/>
     </div>
   );
 }

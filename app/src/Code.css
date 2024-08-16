@@ -25,3 +25,36 @@ body {
     width: 500px;  /* Desired width */
     border: 1px solid blue; /* Different color for differentiation */
 }
+
+
+
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(2,200px);
+    gap: 20px;
+
+}
+
+.item {
+    background-color: lightblue;
+    padding: 20px;
+    text-align: center;
+    font-size: 18px;
+}
+
+
+/* Medium screens (e.g., tablets) */
+@media (min-width: 600px) {
+    .container {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    }
+}
+
+/* Large screens (e.g., desktops) */
+@media (min-width: 900px) {
+    .container {
+        grid-template-columns: repeat(4, 1fr); /* 4 columns */
+    }
+}
