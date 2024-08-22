@@ -74,10 +74,11 @@ import Mainhoc from "./Code74";
 import Grid from "./Code75";
 import Addbucket from "./Code76";
 import Deletefromaray from "./Code78";
+import Updatearray from "./Code79";
 function App() {
   return (
     <div>
-       <Deletefromaray/>
+       <Updatearray/>
     </div>
   );
 }
