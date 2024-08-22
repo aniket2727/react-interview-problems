@@ -75,10 +75,11 @@ import Grid from "./Code75";
 import Addbucket from "./Code76";
 import Deletefromaray from "./Code78";
 import Updatearray from "./Code79";
+import Code80 from "./Code80";
 function App() {
   return (
     <div>
-       <Updatearray/>
+       <Code80/>
     </div>
   );
 }
