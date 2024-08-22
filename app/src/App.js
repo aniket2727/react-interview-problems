@@ -72,10 +72,11 @@ import Fakesteoreapis from "./Code73";
 import UseCustomHook1 from "./Code73";
 import Mainhoc from "./Code74";
 import Grid from "./Code75";
+import Addbucket from "./Code76";
 function App() {
   return (
     <div>
-       <Grid/>
+       <Addbucket/>
     </div>
   );
 }
