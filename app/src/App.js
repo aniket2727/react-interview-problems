@@ -73,10 +73,11 @@ import UseCustomHook1 from "./Code73";
 import Mainhoc from "./Code74";
 import Grid from "./Code75";
 import Addbucket from "./Code76";
+import Deletefromaray from "./Code78";
 function App() {
   return (
     <div>
-       <Addbucket/>
+       <Deletefromaray/>
     </div>
   );
 }
