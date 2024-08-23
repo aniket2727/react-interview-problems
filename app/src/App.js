@@ -76,10 +76,11 @@ import Addbucket from "./Code76";
 import Deletefromaray from "./Code78";
 import Updatearray from "./Code79";
 import Code80 from "./Code80";
+import Dom1 from "./Code81";
 function App() {
   return (
     <div>
-       <Code80/>
+       <Dom1/>
     </div>
   );
 }
