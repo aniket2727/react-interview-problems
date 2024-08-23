@@ -8,18 +8,12 @@
 
 const  Dom1=()=>{
 
-
     const handleChangeolor=()=>{
-
         const objects=document.getElementsByClassName('change');
-         
         for(let i=0;i<objects.length;i++){
             objects[i].style.color="green"
         }
-
         //  objects.style.color="green"
-
-
     }
 
     return(
