@@ -78,10 +78,11 @@ import Updatearray from "./Code79";
 import Code80 from "./Code80";
 import Dom1 from "./Code81";
 import Curringjavascript from "./Code82";
+import Dom2 from "./Code83";
 function App() {
   return (
     <div>
-       <Curringjavascript/>
+       <Dom2/>
     </div>
   );
 }
