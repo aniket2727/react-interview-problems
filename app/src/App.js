@@ -84,10 +84,11 @@ import Constrution from "./Code85";
 import Promisesinjavascript from "./Code87";
 import Pagetravel from "./Code90";
 import Newconcepts from "./Code91";
+import OuterComponent from "./Code92";
 function App() {
   return (
     <div>
-       <Newconcepts/>
+       <OuterComponent/>
     </div>
   );
 }
