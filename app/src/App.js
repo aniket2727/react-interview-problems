@@ -79,10 +79,11 @@ import Code80 from "./Code80";
 import Dom1 from "./Code81";
 import Curringjavascript from "./Code82";
 import Dom2 from "./Code83";
+import Lifecycles from "./Code84";
 function App() {
   return (
     <div>
-       <Dom2/>
+       <Lifecycles/>
     </div>
   );
 }
