@@ -85,10 +85,11 @@ import Promisesinjavascript from "./Code87";
 import Pagetravel from "./Code90";
 import Newconcepts from "./Code91";
 import OuterComponent from "./Code92";
+import PowerClosures from "./Code93";
 function App() {
   return (
     <div>
-       <OuterComponent/>
+       <PowerClosures/>
     </div>
   );
 }
