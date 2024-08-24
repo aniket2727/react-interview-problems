@@ -1,6 +1,11 @@
 // Code is written by Aniket Kadam
 // Demonstration of React JS Lifecycle methods using hooks
 
+
+
+// JSX Rendering: React processes and renders the component's JSX.
+// useEffect Execution: After the DOM update from the initial render, useEffect callbacks are executed.
+
 import { useEffect, useState } from "react";
 
 const Lifecycles = () => {
