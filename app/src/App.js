@@ -82,10 +82,11 @@ import Dom2 from "./Code83";
 import Lifecycles from "./Code84";
 import Constrution from "./Code85";
 import Promisesinjavascript from "./Code87";
+import Pagetravel from "./Code90";
 function App() {
   return (
     <div>
-       <Promisesinjavascript/>
+       <Pagetravel/>
     </div>
   );
 }
