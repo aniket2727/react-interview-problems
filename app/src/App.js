@@ -86,10 +86,11 @@ import Pagetravel from "./Code90";
 import Newconcepts from "./Code91";
 import OuterComponent from "./Code92";
 import PowerClosures from "./Code93";
+import Foreachcase from "./Code94";
 function App() {
   return (
     <div>
-       <PowerClosures/>
+       <Foreachcase/>
     </div>
   );
 }
