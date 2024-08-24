@@ -81,10 +81,11 @@ import Curringjavascript from "./Code82";
 import Dom2 from "./Code83";
 import Lifecycles from "./Code84";
 import Constrution from "./Code85";
+import Promisesinjavascript from "./Code87";
 function App() {
   return (
     <div>
-       <Constrution/>
+       <Promisesinjavascript/>
     </div>
   );
 }
