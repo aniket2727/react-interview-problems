@@ -87,10 +87,13 @@ import Newconcepts from "./Code91";
 import OuterComponent from "./Code92";
 import PowerClosures from "./Code93";
 import Foreachcase from "./Code94";
+import Switchstatement from "./Code95";
+import Handlepromises from "./Code96";
+import Code97 from "./Code97";
 function App() {
   return (
     <div>
-       <Foreachcase/>
+       <Code97/>
     </div>
   );
 }
