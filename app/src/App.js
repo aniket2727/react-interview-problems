@@ -90,10 +90,11 @@ import Foreachcase from "./Code94";
 import Switchstatement from "./Code95";
 import Handlepromises from "./Code96";
 import Code97 from "./Code97";
+import CurrrancyConvert from "./Code98";
 function App() {
   return (
     <div>
-       <Code97/>
+       <CurrrancyConvert/>
     </div>
   );
 }
