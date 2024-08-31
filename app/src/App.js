@@ -93,12 +93,12 @@ import Code97 from "./Code97";
 import CurrrancyConvert from "./Code98";
 import Nestedobject from "./Code100";
 import Searchbarcomponent from "./Code101";
-
+import SelectionInTable from "./Code102";
 
 function App() {
   return (
     <div>
-       <Searchbarcomponent/>
+       <SelectionInTable/>
     </div>
   );
 }
