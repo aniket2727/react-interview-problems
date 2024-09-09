@@ -96,10 +96,11 @@ import Searchbarcomponent from "./Code101";
 import SelectionInTable from "./Code102";
 import Avoidchildrender from "./Code103";
 import Parent from "./Code105";
+import MyComponent from "./Code106";
 function App() {
   return (
     <div>
-       <Parent/>
+       <MyComponent/>
     </div>
   );
 }
