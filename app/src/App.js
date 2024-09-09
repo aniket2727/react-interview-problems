@@ -94,11 +94,12 @@ import CurrrancyConvert from "./Code98";
 import Nestedobject from "./Code100";
 import Searchbarcomponent from "./Code101";
 import SelectionInTable from "./Code102";
+import Avoidchildrender from "./Code103";
 
 function App() {
   return (
     <div>
-       <SelectionInTable/>
+       <Avoidchildrender/>
     </div>
   );
 }
