@@ -95,11 +95,11 @@ import Nestedobject from "./Code100";
 import Searchbarcomponent from "./Code101";
 import SelectionInTable from "./Code102";
 import Avoidchildrender from "./Code103";
-
+import Parent from "./Code105";
 function App() {
   return (
     <div>
-       <Avoidchildrender/>
+       <Parent/>
     </div>
   );
 }
