@@ -98,10 +98,11 @@ import Avoidchildrender from "./Code103";
 import Parent from "./Code105";
 import MyComponent from "./Code106";
 import App1 from "./Code107";
+import Code108 from "./Code108";
 function App() {
   return (
     <div>
-       <App1/>
+       <Code108/>
     </div>
   );
 }
