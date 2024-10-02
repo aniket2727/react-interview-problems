@@ -1,5 +1,5 @@
 // code is written by aniket kadam
-
+// obejct is entries is used to convert the obejct into the arrays
 import { useState } from "react";
 
 const Experiments = () => {
