@@ -21,7 +21,7 @@ const PromisesUnderstanding = () => {
     function handleSecond() {
       return new Promise((resolve, reject) => {
         try {
-          fetch('https://jsonplaceholder.typicode.com/todos/1')
+          fetch('https://jsonplaceholder.typicode.com/todos/0')
             .then((response) => {
               if (response.ok) {
                 return response.json(); // Parse the response as JSON
@@ -41,23 +41,15 @@ const PromisesUnderstanding = () => {
       });
     }
   
-    // Call the promises and handle them
-    handlePromises()
-      .then((data) => {
-        console.log("The result from handlePromises is", data);
-      })
-      .catch((error) => {
-        console.error(error);
-      });
-  
-    handleSecond()
-      .then((data) => {
-        console.log("The data from handleSecond is", data);
-      })
-      .catch((error) => {
-        console.log("The error is", error);
-      });
-  
+ 
+     Promise.any([handlePromises(),handleSecond()])
+     .then(([result1,result2])=>{
+        console.log("The result from handlePromises is", result1);
+        console.log("The data from handleSecond is", result2);
+     })
+     .catch((error)=>{
+        console.log("the error is ",error);
+     })
     return (
       <h1>Promises Understanding</h1>
     );
