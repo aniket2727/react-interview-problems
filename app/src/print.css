@@ -1,0 +1,53 @@
+
+
+
+/* code is written by aniket kadam */
+
+/* Container styles */
+.container {
+    text-align: center;
+    padding: 20px;
+}
+
+/* Popup styles */
+.popup {
+    background-color: #e0f7fa;
+    padding: 20px;
+    border-radius: 10px;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+/* Fade-in effect */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1s forwards; /* Animation for fading in */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Button styles */
+.display-btn, .close-btn {
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.close-btn {
+    background-color: #f44336;
+}
+
+.display-btn:hover, .close-btn:hover {
+    background-color: #3e8e41;
+}

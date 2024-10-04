@@ -1,36 +1,34 @@
-
-
-
 // code is written by aniket kadam
 
 import { useState } from "react";
+import './print.css'; // Import the CSS file
 
+const Printdatadisplay = () => {
+    const [flag, setFlag] = useState(false);
 
+    const handleDisplay = () => {
+        setFlag(!flag);
+    };
 
-const Printdatadisplay=()=>{
-
-    const[flag,setflag]=useState(false);
-
-    const handledisplay=()=>{
-         setflag(!flag);
-    }
-
-    if(flag){
-       return(
-        <div > 
-           <h1>booked</h1>
-           <button onClick={()=>handledisplay()}>close</button>
+    return (
+        <div className="container">
+            {flag ? (
+                <div className="popup fade-in">
+                    <h1>Booked</h1>
+                    <button className="close-btn" onClick={handleDisplay}>
+                        Close
+                    </button>
+                </div>
+            ) : (
+                <div>
+                    <h1>Print Blocks</h1>
+                    <button className="display-btn" onClick={handleDisplay}>
+                        Display
+                    </button>
+                </div>
+            )}
         </div>
-       )
-    }
-    return(
-        <div>
-           <h1>print blcoks</h1>
-           <button  onClick={()=>handledisplay()}>display</button>
-        </div>
-    )
+    );
 };
-
-
 
 export default Printdatadisplay;
