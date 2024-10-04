@@ -111,12 +111,12 @@ import Code117 from "./Code117";
 import Code118 from "./Code118";
 import Code119 from "./Code119";
 import Timercode from "./Code120";
-
+import Printdatadisplay from "./Code121";
 
 function App() {
   return (
     <div>
-       <Timercode/>
+       <Printdatadisplay/>
     </div>
   );
 }
