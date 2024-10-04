@@ -4,44 +4,59 @@
 import { useState, useEffect } from "react";
 
 const Timercode = () => {
-    const [inputdata, setinputdata] = useState('');
-    const [minute, setminute] = useState(0);
-    const [second, setsecond] = useState(0);
-    const [totaltime, settotaltime] = useState(0); // totaltime initialized to 0
+    const [inputHours, setInputHours] = useState('');
+    const [inputMinutes, setInputMinutes] = useState('');
+    const [hours, setHours] = useState(0);
+    const [minutes, setMinutes] = useState(0);
+    const [seconds, setSeconds] = useState(0);
+    const [totalTime, setTotalTime] = useState(0); // totalTime in seconds
 
-    const handlestart = () => {
-        let result = parseInt(inputdata) * 60; // convert input data to a number
-        settotaltime(result);
+    const handleStart = () => {
+        let totalSeconds = (parseInt(inputHours) * 3600 || 0) + (parseInt(inputMinutes) * 60 || 0);
+        setTotalTime(totalSeconds);
     };
 
     useEffect(() => {
-        if (totaltime > 0) {
+        if (totalTime > 0) {
             const timer = setTimeout(() => {
-                settotaltime((prev) => prev - 1);
+                setTotalTime((prev) => prev - 1);
             }, 1000);
 
             return () => clearTimeout(timer); // cleanup timeout
         }
-    }, [totaltime]);
+    }, [totalTime]);
 
     useEffect(() => {
-        let displayminute = Math.floor(totaltime / 60);
-        let displaysecond = totaltime % 60;
-        setminute(displayminute);
-        setsecond(displaysecond);
-    }, [totaltime]);
+        let displayHours = Math.floor(totalTime / 3600);
+        let displayMinutes = Math.floor((totalTime % 3600) / 60);
+        let displaySeconds = totalTime % 60;
+
+        setHours(displayHours);
+        setMinutes(displayMinutes);
+        setSeconds(displaySeconds);
+    }, [totalTime]);
 
     return (
         <div>
             <h1>Timer Code</h1>
-            <input
-                value={inputdata}
-                type="number"
-                onChange={(e) => setinputdata(e.target.value)}
-                placeholder="Enter minutes"
-            />
-            <button onClick={handlestart}>Start</button>
-            <h1>{minute} : {second < 10 ? `0${second}` : second}</h1>
+            <div>
+                <input
+                    value={inputHours}
+                    type="number"
+                    onChange={(e) => setInputHours(e.target.value)}
+                    placeholder="Enter hours"
+                />
+                <input
+                    value={inputMinutes}
+                    type="number"
+                    onChange={(e) => setInputMinutes(e.target.value)}
+                    placeholder="Enter minutes"
+                />
+            </div>
+            <button onClick={handleStart}>Start</button>
+            <h1>
+                {hours} : {minutes < 10 ? `0${minutes}` : minutes} : {seconds < 10 ? `0${seconds}` : seconds}
+            </h1>
         </div>
     );
 };
