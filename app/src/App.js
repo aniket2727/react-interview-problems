@@ -122,10 +122,12 @@ import Code128 from "./Code128";
 // import Code130 from "./Code130";
 import Closures from "./Code131";
 import Curring from "./Code132";
+import Code133 from "./Code133";
+import Code134 from "./Code134";
 function App() {
   return (
     <div>
-       <Curring/>
+       <Code134/>
     </div>
   );
 }
