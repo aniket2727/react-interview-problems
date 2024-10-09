@@ -118,15 +118,16 @@ import Code124 from "./Code124";
 import Counterproblem from "./Code125";
 import Code126 from "./Code126";
 import Code128 from "./Code128";
-import Contextforname from "./Code129";
-import Code130 from "./Code130";
+// import Contextforname from "./Code129";
+// import Code130 from "./Code130";
+import Closures from "./Code131";
 function App() {
   return (
     <div>
-       <Contextforname>
+       {/* <Contextforname>
        <Code130/>
-       </Contextforname>
-    
+       </Contextforname> */}
+        <Closures/>
     </div>
   );
 }
