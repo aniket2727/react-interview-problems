@@ -124,10 +124,14 @@ import Closures from "./Code131";
 import Curring from "./Code132";
 import Code133 from "./Code133";
 import Code134 from "./Code134";
+import Callbacks1 from "./Code136";
+
+
+
 function App() {
   return (
     <div>
-       <Code134/>
+       <Callbacks1/>
     </div>
   );
 }
