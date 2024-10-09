@@ -117,10 +117,11 @@ import Code123 from "./Code123";
 import Code124 from "./Code124";
 import Counterproblem from "./Code125";
 import Code126 from "./Code126";
+import Code128 from "./Code128";
 function App() {
   return (
     <div>
-       <Code126/>
+       <Code128/>
     </div>
   );
 }
