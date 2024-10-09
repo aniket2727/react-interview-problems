@@ -121,13 +121,11 @@ import Code128 from "./Code128";
 // import Contextforname from "./Code129";
 // import Code130 from "./Code130";
 import Closures from "./Code131";
+import Curring from "./Code132";
 function App() {
   return (
     <div>
-       {/* <Contextforname>
-       <Code130/>
-       </Contextforname> */}
-        <Closures/>
+       <Curring/>
     </div>
   );
 }
