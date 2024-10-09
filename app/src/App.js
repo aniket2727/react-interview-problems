@@ -116,11 +116,11 @@ import Code122 from "./Code122";
 import Code123 from "./Code123";
 import Code124 from "./Code124";
 import Counterproblem from "./Code125";
-
+import Code126 from "./Code126";
 function App() {
   return (
     <div>
-       <Counterproblem/>
+       <Code126/>
     </div>
   );
 }
