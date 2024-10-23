@@ -131,11 +131,11 @@ import CounterP from "./Code140";
 import Code141 from './Code141';
 import Code142 from './Code142'
 import Code143 from "./Code143";
-
+import Fetch2 from "./Fetch2";
 function App() {
   return (
     <div>
-       <Code143/>
+       <Fetch2/>
     </div>
   );
 }
