@@ -129,13 +129,13 @@ import Code137 from "./Code137";
 // import Code137 from "./Code137";
 import CounterP from "./Code140";
 import Code141 from './Code141';
-
+import Code142 from './Code142'
 
 
 function App() {
   return (
     <div>
-       <Code141/>
+       <Code142/>
     </div>
   );
 }
