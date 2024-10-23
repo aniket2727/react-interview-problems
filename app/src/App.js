@@ -133,10 +133,11 @@ import Code142 from './Code142'
 import Code143 from "./Code143";
 import Fetch2 from "./Fetch2";
 import Pagination from "./Paginations";
+import Form1 from "./Form/Form1";
 function App() {
   return (
     <div>
-       <Pagination/>
+       <Form1/>
     </div>
   );
 }
