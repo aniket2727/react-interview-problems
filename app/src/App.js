@@ -132,10 +132,11 @@ import Code141 from './Code141';
 import Code142 from './Code142'
 import Code143 from "./Code143";
 import Fetch2 from "./Fetch2";
+import Pagination from "./Paginations";
 function App() {
   return (
     <div>
-       <Fetch2/>
+       <Pagination/>
     </div>
   );
 }
