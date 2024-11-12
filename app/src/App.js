@@ -138,10 +138,11 @@ import Code148 from "./Form/Code148";
 import Hoc222 from "./Form/Hoc222";
 import Code223 from "./Code223";
 import Code150 from "./Code150";
+import Code152 from "./Code152";
 function App() {
   return (
     <div>
-       <Code150/>
+       <Code152/>
     </div>
   );
 }
