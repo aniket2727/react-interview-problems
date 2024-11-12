@@ -136,10 +136,11 @@ import Pagination from "./Paginations";
 import Form1 from "./Form/Form1";
 import Code148 from "./Form/Code148";
 import Hoc222 from "./Form/Hoc222";
+import Code223 from "./Code223";
 function App() {
   return (
     <div>
-       <Hoc222/>
+       <Code223/>
     </div>
   );
 }
