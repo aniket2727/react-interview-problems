@@ -2,7 +2,10 @@
 
 import React from 'react'
 // it gives error for the arraow funtion
+
+
 const Code152 = () => {
+    
     var name="simmi"
     const person = {
         name: 'Aniket',
