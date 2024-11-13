@@ -141,10 +141,12 @@ import Code150 from "./Code150";
 import Code152 from "./Code152";
 import Code153 from "./Code153";
 import Code154 from "./Code154";
+import Code155 from "./Code155";
+import { Hocsend } from "./Code156";
 function App() {
   return (
     <div>
-       <Code154/>
+       <Hocsend/>
     </div>
   );
 }
