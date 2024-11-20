@@ -146,10 +146,12 @@ import { Hocsend } from "./Code156";
 import Printdata from "./Code157";
 import Code158 from "./Code158";
 import Code159 from "./Code159";
+import Code160 from "./Code160";
+import Code161 from "./Code161";
 function App() {
   return (
     <div>
-       <Code159/>
+       <Code161/>
     </div>
   );
 }
