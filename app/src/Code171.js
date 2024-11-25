@@ -9,7 +9,7 @@ const Code171 = () => {
   const count={};
   for(let i=0;i<data.length-1;i++){
     if(count[data[i]]){
-      data.splice(i,1);  
+      data.splice(i);  
     }
     else{
         count[data[i]]=1
