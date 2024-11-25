@@ -18,7 +18,7 @@ const Code172 = () => {
     console.log("data is",aa);
   return (
     <div>
-      
+      <h1>repeleting elements in array</h1>
     </div>
   )
 }
