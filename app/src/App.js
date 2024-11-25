@@ -156,10 +156,12 @@ import Code166 from './Code166';
 import Code167 from "./Code167";
 import Code168 from './Code168';
 import Code169 from "./Code169";
+import Code170 from "./Code170";
+import Code171 from './Code171';
 function App() {
   return (
     <div>
-       <Code169/>
+       <Code171/>
     </div>
   );
 }
