@@ -18,7 +18,7 @@ const useDebounce = (value, delay) => {
 
 const Code180 = () => {
   const [data, setData] = useState("");
-  const debouncedData = useDebounce(data, 500); // Hook handles debouncing
+  const debouncedData = useDebounce(data, 1000); // Hook handles debouncing
 
   return (
     <div>
