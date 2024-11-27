@@ -10,12 +10,12 @@ const Code183=()=>{
 
 
     const handlepalidrom=()=>{
-          const data="anina";
+          const data="aninakk";
           let i=0;
           let j=data.length-1;
           let flag=true;
           while(i<j){
-            if(!data[i]===data[j]){
+            if(data[i]!==data[j]){
                 flag=false
                 break;
             }
@@ -33,7 +33,7 @@ const Code183=()=>{
     handlepalidrom();
     return(
         <div>
-                
+                <h1>this is palindrom</h1>
         </div>
     )
 };
