@@ -168,10 +168,13 @@ import Code178 from "./Code178";
 import Code179 from "./Code179";
 import Code180 from "./Code180";
 import Code181 from "./Code181";
+import Code182 from "./Code182";
+import Code183 from "./Code183";
+
 function App() {
   return (
     <div>
-       <Code181/>
+       <Code183/>
     </div>
   );
 }
