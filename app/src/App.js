@@ -181,10 +181,12 @@ import Code192 from './Code192';
 import Code193 from './Code193';
 import Code194 from './Code194';
 import Code196 from "./Code196";
+import Code197 from "./Code197";
+import Code198 from "./Code198";
 function App() {
   return (
     <div>
-       <Code196/>
+       <Code198/>
     </div>
   );
 }
