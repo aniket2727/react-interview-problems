@@ -11,13 +11,9 @@ const Code202 = () => {
 
     const [data, setdata] = useState('');
 
-
-
     const handleChecked = (event) => {
         setdata(event.target.value);
     }
-
-
 
     return (
         <div>
