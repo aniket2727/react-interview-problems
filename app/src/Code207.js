@@ -3,8 +3,8 @@ import React, { useState, useEffect } from 'react';
 const Code207 = () => {
     const [data, setData] = useState([]);
     const [selectedParamsPrice, setSelectedParamsPrice] = useState([]);
-    const [price, setPrice] = useState('');
     const [filteredData, setFilteredData] = useState([]);
+    const [categories, setCategories] = useState([]);
 
     // Fetch data
     useEffect(() => {
@@ -16,6 +16,14 @@ const Code207 = () => {
                 }
                 const result = await response.json();
                 setData(result);
+
+                // Extract unique categories
+                const uniqueCategories = Array.from(
+                    new Set(result.map((item) => item.category.name))
+                );
+                setCategories(uniqueCategories);
+
+                console.log("Categories: ", uniqueCategories);
             } catch (error) {
                 console.log("Error in fetching the data", error);
             }
@@ -23,13 +31,6 @@ const Code207 = () => {
 
         handleFetch();
     }, []);
-
-    // Update selected price parameters
-    useEffect(() => {
-        if (price) {
-            setSelectedParamsPrice((prev) => [...prev, price]);
-        }
-    }, [price]);
 
     // Filter data based on selected prices
     useEffect(() => {
@@ -41,6 +42,13 @@ const Code207 = () => {
             setFilteredData(data); // Default to all data if no filters are selected
         }
     }, [selectedParamsPrice, data]);
+
+    // Handle price filter selection
+    const handlePriceSelection = (price) => {
+        setSelectedParamsPrice((prev) =>
+            prev.includes(price) ? prev.filter((p) => p !== price) : [...prev, price]
+        );
+    };
 
     console.log("Data is: ", data);
     console.log("Filtered data is: ", filteredData);
@@ -60,14 +68,29 @@ const Code207 = () => {
 
             <h1>Filter by Price</h1>
             <div>
-                <input type="checkbox" onChange={() => setPrice(50)} /> <p>50</p>
-                <input type="checkbox" onChange={() => setPrice(100)} /> <p>100</p>
-                <input type="checkbox" onChange={() => setPrice(200)} /> <p>200</p>
+                <input
+                    type="checkbox"
+                    onChange={() => handlePriceSelection(50)}
+                /> <p>50</p>
+                <input
+                    type="checkbox"
+                    onChange={() => handlePriceSelection(100)}
+                /> <p>100</p>
+                <input
+                    type="checkbox"
+                    onChange={() => handlePriceSelection(200)}
+                /> <p>200</p>
             </div>
 
             <h1>Filter by Category</h1>
-            {/* Category filtering logic can be added here */}
-            <input type="checkbox" />
+            <div>
+                {categories.map((category, index) => (
+                    <div key={index}>
+                        <input type="checkbox" />
+                        <p>{category}</p>
+                    </div>
+                ))}
+            </div>
         </div>
     );
 };
