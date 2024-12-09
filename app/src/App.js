@@ -196,10 +196,11 @@ import Code210 from "./Code210";
 import Code211 from "./Code211";
 // import Code212 from "./Code212";
 import Code213 from "./Code213";
+import Code214 from "./Code214";
 function App() {
   return (
     <div>
-       <Code213/>
+       <Code214/>
     </div>
   );
 }
