@@ -204,10 +204,13 @@ import Code218 from "./Code218";
 import Code219 from "./Code219";
 import Code221 from "./Code221";
 import FolderViewer from "./Code222";
+import FolderExplorer from "./Code224";
+import FolderExplorer1 from "./Code225";
+import FolderExplorer2 from "./Code226";
 function App() {
   return (
     <div>
-     <FolderViewer/>
+     <FolderExplorer2/>
     </div>
   );
 }
