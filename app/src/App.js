@@ -208,6 +208,7 @@ import FolderExplorer from "./Code224";
 import FolderExplorer1 from "./Code225";
 import FolderExplorer2 from "./Code226";
 import Code227 from './Code227';
+import TicTacToe from "./Code228";
 function App() {
   return (
     <div>
