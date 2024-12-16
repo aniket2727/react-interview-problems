@@ -207,10 +207,11 @@ import FolderViewer from "./Code222";
 import FolderExplorer from "./Code224";
 import FolderExplorer1 from "./Code225";
 import FolderExplorer2 from "./Code226";
+import Code227 from './Code227';
 function App() {
   return (
     <div>
-     <FolderExplorer2/>
+     <Code227/>
     </div>
   );
 }
