@@ -211,10 +211,11 @@ import Code227 from './Code227';
 import TicTacToe from "./Code228";
 import Code232 from "./Code232";
 import Code234 from "./Code234";
+import Code235 from "./Code235";
 function App() {
   return (
     <div>
-     <Code234/>
+     <Code235/>
     </div>
   );
 }
