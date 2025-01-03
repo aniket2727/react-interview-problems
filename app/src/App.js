@@ -210,10 +210,11 @@ import FolderExplorer2 from "./Code226";
 import Code227 from './Code227';
 import TicTacToe from "./Code228";
 import Code232 from "./Code232";
+import Code234 from "./Code234";
 function App() {
   return (
     <div>
-     <Code232/>
+     <Code234/>
     </div>
   );
 }

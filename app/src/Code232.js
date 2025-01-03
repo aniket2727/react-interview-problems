@@ -18,7 +18,6 @@ const Code232 = () => {
 
     //cuuuring 
 
-
     function currring(a) {
         return function (b) {
             return function (c) {
@@ -44,6 +43,13 @@ const Code232 = () => {
     printdata.apply(data,["hello world","end"]);
     const gg=printdata.bind(data,"hello","bye");
     gg();
+
+
+    
+
+
+  
+
 
     return (
         <div>
