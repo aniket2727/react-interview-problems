@@ -29,6 +29,22 @@ const Code232 = () => {
 
     currring(10)(20)(30);
 
+    //call applay bind
+
+    const data={
+        name:"aniket",
+        age:"20"
+    }
+
+    function printdata(grreting,end){
+        console.log(` ${this.name} ${grreting}`)
+    }
+
+    printdata.call(data,"hellow world","bye");
+    printdata.apply(data,["hello world","end"]);
+    const gg=printdata.bind(data,"hello","bye");
+    gg();
+
     return (
         <div>
             <h1>code is running</h1>
