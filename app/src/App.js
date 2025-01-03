@@ -213,10 +213,11 @@ import Code232 from "./Code232";
 import Code234 from "./Code234";
 import Code235 from "./Code235";
 import Parentdata from "./Code236";
+import Code237 from "./Code237";
 function App() {
   return (
     <div>
-     <Parentdata/>
+     <Code237/>
     </div>
   );
 }
