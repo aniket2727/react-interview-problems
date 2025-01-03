@@ -212,10 +212,11 @@ import TicTacToe from "./Code228";
 import Code232 from "./Code232";
 import Code234 from "./Code234";
 import Code235 from "./Code235";
+import Parentdata from "./Code236";
 function App() {
   return (
     <div>
-     <Code235/>
+     <Parentdata/>
     </div>
   );
 }
