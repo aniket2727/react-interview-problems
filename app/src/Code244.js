@@ -56,6 +56,25 @@ const Code244 = () => {
     // const entries = Object.entries(data).filter(([key, value]) => key !== "age");
     // const newData = Object.fromEntries(entries);
     // console.log(newData);
+
+
+    // const data={
+    //     name:"aniket",
+    //     scores:[1,2,3,4,5,6]
+    // };
+
+    // console.log(data);
+
+    // Object.entries(data).map(([key,value])=>{
+    //     if(Array.isArray(value)){
+    //         value.map((item)=>{
+    //             console.log(item)
+    //         })
+    //     }
+    // })
+
+
+  
       
   return (
     <div>
