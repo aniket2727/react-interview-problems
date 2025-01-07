@@ -14,7 +14,12 @@ const Code248 = () => {
         setdata((prev)=>{
             return prev.map((item)=>item.name==="aniket"?{...item,name:'kadam'}:item);
          });
+
+         const changeddata=data.map((item)=>item.name==='vijay' ?{...item,status:!item.status}:item);
+         setdata(changeddata);
      },[]);
+
+
     console.log(data);
   return (
     <div>
