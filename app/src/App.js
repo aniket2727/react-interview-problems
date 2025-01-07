@@ -222,10 +222,11 @@ import Code243 from "./Code243";
 import Code244 from "./Code244";
 import Code245 from "./Code245";
 import Code246  from './Code246';
+import Code247 from "./Code247";
 function App() {
   return (
     <div>
-     <Code246/>
+     <Code247/>
     </div>
   );
 }
