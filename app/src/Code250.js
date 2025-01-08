@@ -42,15 +42,16 @@ const Printdata = ({ folder, handlestate, add }) => {
           </button>
 
           <div>
+            {/* Correct the condition to check for undefined */}
             {inputDatastate.state && inputDatastate.name === item.name && (
-              <input
-                placeholder="Add to folder"
-                value={inputData}
-                onChange={(e) => setinputData(e.target.value)}
-              />
-            )}
-            {inputDatastate.state && inputDatastate.name === item.name && (
-              <button onClick={() => handleAddstate(item.name)}>Add data</button>
+              <>
+                <input
+                  placeholder="Add to folder"
+                  value={inputData}
+                  onChange={(e) => setinputData(e.target.value)}
+                />
+                <button onClick={() => handleAddstate(item.name)}>Add data</button>
+              </>
             )}
           </div>
 
