@@ -24,37 +24,42 @@ const Printdata = ({ folder, handlestate, add }) => {
   };
 
   return (
-    folderData &&
-    folderData.map((item, index) => (
-      <div key={index}>
-        <button
-          style={{ backgroundColor: 'green', borderRadius: '10px', margin: '10px', padding: '10px' }}
-          onClick={() => handlestate(item.name)}
-        >
-          {item.name}
-        </button>
-        <button style={{ backgroundColor: 'red' }} onClick={() => handleUpdatestate(item.name)}>
-          Add
-        </button>
+    Array.isArray(folderData) &&
+    folderData.map((item, index) => {
+      // Ensure item is defined before accessing its properties
+      if (!item || !item.name) return null;
 
-        <div>
-          {inputDatastate.state && inputDatastate.name === item.name && (
-            <input
-              placeholder="Add to folder"
-              value={inputData}
-              onChange={(e) => setinputData(e.target.value)}
-            />
-          )}
-          {inputDatastate.state && inputDatastate.name === item.name && (
-            <button onClick={() => handleAddstate(item.name)}>Add data</button>
-          )}
+      return (
+        <div key={index}>
+          <button
+            style={{ backgroundColor: 'green', borderRadius: '10px', margin: '10px', padding: '10px' }}
+            onClick={() => handlestate(item.name)}
+          >
+            {item.name}
+          </button>
+          <button style={{ backgroundColor: 'red' }} onClick={() => handleUpdatestate(item.name)}>
+            Add
+          </button>
+
+          <div>
+            {inputDatastate.state && inputDatastate.name === item.name && (
+              <input
+                placeholder="Add to folder"
+                value={inputData}
+                onChange={(e) => setinputData(e.target.value)}
+              />
+            )}
+            {inputDatastate.state && inputDatastate.name === item.name && (
+              <button onClick={() => handleAddstate(item.name)}>Add data</button>
+            )}
+          </div>
+
+          {item.status === true && item.child && item.child.length > 0 ? (
+            <Printdata folder={item.child} handlestate={handlestate} add={add} />
+          ) : null}
         </div>
-
-        {item.status === true && item.child.length > 0 ? (
-          <Printdata folder={item.child} handlestate={handlestate} add={add} />
-        ) : null}
-      </div>
-    ))
+      );
+    })
   );
 };
 
@@ -101,7 +106,7 @@ const Code250 = () => {
   return (
     <div>
       <h1>folder structure</h1>
-      {data &&
+      {Array.isArray(data) &&
         data.map((item, index) => (
           typeof item === 'object' ? (
             <Printdata folder={[item]} handlestate={handleUpdateState} add={handleAddstate} />
