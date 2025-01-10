@@ -227,10 +227,13 @@ import Code248 from "./Code248";
 import Code247A from "./Code249";
 import Code250 from "./Code250";
 import FolderStructure from "./Foderstruture.js";
+import Code251 from "./Code251.js";
+
+
 function App() {
   return (
     <div>
-     <FolderStructure/>
+     <Code251/>
     </div>
   );
 }
