@@ -1,0 +1,39 @@
+.page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+
+}
+
+
+.nofyfications {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    padding: 10px;
+    color: white;
+    animation: slideline 0.5s ease-out forwards;
+    
+}
+
+
+.nofyfications h1 {
+    font-size: 20px;
+    padding: 10px;
+}
+
+
+.sp{
+    position: relative;
+    left: 10px;
+}
+@keyframes slideline {
+    from {
+        transform: translateX(100%);
+    }
+
+    to {
+        transform: translateX(0%);
+    }
+}
