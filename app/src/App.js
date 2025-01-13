@@ -236,7 +236,7 @@ import Code255 from "./Code255.js";
 function App() {
   return (
     <div>
-        <Code255/>
+        <Snakegame/>
     </div>
   );
 }

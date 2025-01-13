@@ -12,6 +12,9 @@ const Snakegame = () => {
   const [direction, setDirection] = useState({ x: 0, y: -1 });
   const [gameOver, setGameOver] = useState(false);
 
+
+  console.log(snake)
+
   useEffect(() => {
     if (gameOver) return;
 
@@ -71,6 +74,9 @@ const Snakegame = () => {
 
     // Check if snake eats food
     if (food.x === newHead.x && food.y === newHead.y) {
+      // Trigger voice when food is eaten
+      speak("Yum! Food eaten!");
+      
       setFood({
         x: Math.floor(Math.random() * 10),
         y: Math.floor(Math.random() * 10),
@@ -80,6 +86,13 @@ const Snakegame = () => {
     }
 
     setSnake(newSnake);
+  };
+
+  // Function to make the browser speak
+  const speak = (text) => {
+    const utterance = new SpeechSynthesisUtterance(text);
+    utterance.lang = 'en-US'; // Set language to English
+    window.speechSynthesis.speak(utterance);
   };
 
   const handlerestart = () => {
