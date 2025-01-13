@@ -231,10 +231,11 @@ import Code251 from "./Code251.js";
 import Code252 from "./Code252.js";
 import OTPComponent from "./Code253.js";
 import OptGenerattors from "./Code254.js";
+import Snakegame from "./Snakegame.js";
 function App() {
   return (
     <div>
-        <OptGenerattors/>
+        <Snakegame/>
     </div>
   );
 }
