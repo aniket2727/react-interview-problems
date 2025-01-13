@@ -229,11 +229,12 @@ import Code250 from "./Code250";
 import FolderStructure from "./Foderstruture.js";
 import Code251 from "./Code251.js";
 import Code252 from "./Code252.js";
-
+import OTPComponent from "./Code253.js";
+import OptGenerattors from "./Code254.js";
 function App() {
   return (
     <div>
-        <Code252/>
+        <OptGenerattors/>
     </div>
   );
 }

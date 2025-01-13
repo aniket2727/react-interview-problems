@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import './Code252.css';
 
+
+//slice created the new array
+
 const Code252 = () => {
     const [noti, setnoti] = useState([]);
 
