@@ -232,10 +232,11 @@ import Code252 from "./Code252.js";
 import OTPComponent from "./Code253.js";
 import OptGenerattors from "./Code254.js";
 import Snakegame from "./Snakegame.js";
+import Code255 from "./Code255.js";
 function App() {
   return (
     <div>
-        <Snakegame/>
+        <Code255/>
     </div>
   );
 }
