@@ -237,10 +237,13 @@ import Code256 from "./Code256.js";
 import Code257 from "./Code257.js";
 import Code258 from "./Codee258.js";
 import Code260 from "./Code260.js";
+import Code261Tictac from "./Code261Tictac.js";
+
+
 function App() {
   return (
     <div>
-        <Code260/>
+        <Code261Tictac/>
     </div>
   );
 }
