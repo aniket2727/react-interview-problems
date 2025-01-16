@@ -34,13 +34,13 @@ const Codee258 = () => {
     // //  console.log("this is ",s);
 
 
-    useEffect(() => {
-        const { age, rollno } = data; // Destructure the required fields
-        setselecteddata({ age, rollno }); // Update the state with only the required fields
-      }, [data]);
+    // useEffect(() => {
+    //     const { age, rollno } = data; // Destructure the required fields
+    //     setselecteddata({ age, rollno }); // Update the state with only the required fields
+    //   }, [data]);
 
 
-      console.log("selcted data ",selcteddata);
+    //console.log("selcted data ",selcteddata);
  
   return (
     <div>
