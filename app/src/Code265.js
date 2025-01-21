@@ -34,7 +34,7 @@ const useFetch = (url) => {
 
 
         fetchdata();
-    }, []);
+    }, [url]);
 
 
 
@@ -49,8 +49,8 @@ const Code265 = () => {
     const [error1, setError1] = useState('');
     const [load, setLoad] = useState('');
     const [counter, setcounter] = useState(0);
-    const [pagescount,setpagescount]=useState('');
-    const [responce,setresponce]=useState([]);
+    const [pagescount, setpagescount] = useState('');
+    const [responce, setresponce] = useState([]);
 
     const { data, error, loading } = useFetch('https://fakestoreapi.com/products');
     console.log(data);
@@ -64,13 +64,16 @@ const Code265 = () => {
 
 
 
-    useEffect(()=>{
+    useEffect(() => {
 
-        const dataL=fetchedData.length;
-        const totalpages=Math.ceil(dataL/4);
+        const dataL = fetchedData.length;
+        const totalpages = Math.ceil(dataL / 2);
         setpagescount(totalpages);
 
-    },[fetchedData]);
+    }, [fetchedData]);
+
+
+    console.log("pages count", pagescount)
 
 
     const handleCounter = (value) => {
@@ -79,44 +82,82 @@ const Code265 = () => {
                 setcounter(counter - 1);
             }
         }
-        else{
-           if(counter<pagescount){
-               setcounter(counter+1);
-           }
+        else {
+            if (counter < pagescount) {
+                setcounter(counter + 1);
+            }
         }
     }
 
 
-    useEffect(()=>{
-        const result=fetchedData.slice(counter*4,counter*4+4);  
+    useEffect(() => {
+        const result = fetchedData.slice(counter * 2, counter * 2 + 2);
         setresponce(result);
-    },[counter]);
+    }, [counter,fetchedData]);
 
 
 
-    // if (load) {
-    //     return (
-    //         <div>
-    //             <h1>loading ......</h1>
-    //         </div>
-    //     )
-    // }
+    const handleButtonSelect = (index) => {
+        setcounter(index);
+    }
 
 
-    
+
     return (
         <div>
-            <h1>fetching data   ,counter value{counter} </h1>
+            <h1>fetching data   , counter value {counter} </h1>
 
             {
-               responce && responce.map((item,index)=>(
-                    <div key={index} style={{border:'1px solid red',margin:'10px'}}>
-                        <h1 style={{margin:'10px', borderBlockColor:'1px solid black'}}>{item.title}</h1>
-                    </div>    
+                responce && responce.map((item, index) => (
+                    <div key={index} style={{ border: '1px solid red', margin: '10px' }}>
+                        <h1 style={{ margin: '10px', borderBlockColor: '1px solid black' }}>{item.title}</h1>
+                    </div>
                 ))
             }
-            <button  style={{cursor:"pointer"}} disabled={counter===0} onClick={() => handleCounter(-1)}>prev</button>
-            <button style={{cursor:'pointer'}} disabled={counter===pagescount-1} onClick={() => handleCounter(1)}>next</button>
+
+
+            <button style={{ cursor: "pointer", margin: '10px' }} disabled={counter === 0} onClick={() => handleCounter(-1)}>prev</button>
+            <button style={{ cursor: 'pointer', margin: '10px' }} disabled={counter === pagescount - 1 || counter > pagescount} onClick={() => handleCounter(1)}>next</button>
+
+
+            {
+                counter <= 2 ? <div>{Array.from({ length: 3 }).map((_, index) => (
+                    <div style={{display:'flex',alignItems:'center',justifyContent:'center'}}>
+                        <button onClick={() => handleButtonSelect(index+1)}>{index + 1}</button>
+                    </div>
+                ))}</div> :
+                    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                        <h1>...</h1>
+                        {
+                            counter + 4 < pagescount  ? Array.from({ length: 4 }).map((_, index) => (
+                                <div key={index}>
+                                    <button style={{ margin: '10px' }} onClick={() => handleButtonSelect(counter + index)}>{counter + index}</button>
+                                </div>
+                            )) : <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                                <h1>....</h1>
+                                {
+                                    Array.from({ length: 4 }).map((_, index) => {
+                                        return (
+                                            <div key={index}>
+                                                {
+                                                    counter + index < pagescount ? <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                                                    <button onClick={()=>handleButtonSelect(counter-4)} style={{ margin: '10px' }}>{counter - 4}</button>
+                                                    <button onClick={()=>handleButtonSelect(counter-3)}  style={{ margin: '10px' }}>{counter - 3}</button>
+                                                    <button onClick={()=>handleButtonSelect(counter-2)}  style={{ margin: '10px' }}>{counter - 2}</button>
+                                                    <button onClick={()=>handleButtonSelect(counter-1)}  style={{ margin: '10px' }}>{counter - 1}</button>
+                                                    <button onClick={()=>handleButtonSelect(counter)}  style={{ margin: '10px' }}>{counter}</button>
+
+                                                </div>: <button onClick={() => handleButtonSelect(counter + index)} style={{ margin: '10px'}}>{counter + index}</button> 
+                                                       
+                                                }
+                                            </div>
+                                        )
+                                    })
+                                }
+                            </div>
+                        }
+                    </div>
+            }
         </div>
     )
 }
