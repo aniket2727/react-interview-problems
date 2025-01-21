@@ -241,10 +241,11 @@ import Code261Tictac from "./Code261Tictac.js";
 import DragAndDropList from "./Codegraganddrop.js";
 import CodeDrag263 from "./CodeDrag263.js";
 import Code261 from "./Code261.js";
+import Code265 from "./Code265.js";
 function App() {
   return (
     <div>
-        <Code261/>
+        <Code265/>
     </div>
   );
 }
