@@ -243,10 +243,11 @@ import CodeDrag263 from "./CodeDrag263.js";
 import Code261 from "./Code261.js";
 import Code265 from "./Code265.js";
 import Code266 from "./Code266.js";
+import Code268 from "./Code268.js";
 function App() {
   return (
     <div>
-        <Code266/>
+        <Code268/>
     </div>
   );
 }
