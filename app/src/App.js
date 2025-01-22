@@ -244,10 +244,11 @@ import Code261 from "./Code261.js";
 import Code265 from "./Code265.js";
 import Code266 from "./Code266.js";
 import Code268 from "./Code268.js";
+import Code269 from "./Code269.js";
 function App() {
   return (
     <div>
-        <Code268/>
+        <Code269/>
     </div>
   );
 }
