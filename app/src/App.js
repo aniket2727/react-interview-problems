@@ -246,10 +246,11 @@ import Code266 from "./Code266.js";
 import Code268 from "./Code268.js";
 import Code269 from "./Code269.js";
 import CustomMap from "./Code270.js";
+import Code271 from "./Code271.js";
 function App() {
   return (
     <div>
-        <CustomMap/>
+        <Code271/>
     </div>
   );
 }
