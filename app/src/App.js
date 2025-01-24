@@ -247,10 +247,11 @@ import Code268 from "./Code268.js";
 import Code269 from "./Code269.js";
 import CustomMap from "./Code270.js";
 import Code271 from "./Code271.js";
+import ReducersCustome from "./Code272.js";
 function App() {
   return (
     <div>
-        <Code271/>
+        <ReducersCustome/>
     </div>
   );
 }
