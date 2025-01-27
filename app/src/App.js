@@ -252,10 +252,11 @@ import Code273 from "./Code273.js";
 import Progressbarft from "./Code274.js";
 import Code275 from "./Code275.js";
 import Code276 from "./Code276.js";
+import Code278 from "./Code278.js";
 function App() {
   return (
     <div>
-        <Code276/>
+        <Code278/>
     </div>
   );
 }
