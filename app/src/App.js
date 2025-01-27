@@ -248,10 +248,13 @@ import Code269 from "./Code269.js";
 import CustomMap from "./Code270.js";
 import Code271 from "./Code271.js";
 import ReducersCustome from "./Code272.js";
+import Code273 from "./Code273.js";
+import Progressbarft from "./Code274.js";
+import Code275 from "./Code275.js";
 function App() {
   return (
     <div>
-        <ReducersCustome/>
+        <Code275/>
     </div>
   );
 }
