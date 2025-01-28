@@ -1,11 +1,19 @@
 import React, { useEffect, useState } from 'react';
 
-const PrintData = ({ folder, handleState, handleDelete }) => {
-    const [data, setdata] = useState('');
+const PrintData = ({ folder, handleState, handleDelete, handleAddItems }) => {
+    const [data, setData] = useState('');
+    const [inputData, setInputData] = useState('');
+    const [addStatus, setAddStatus] = useState(false);
 
     useEffect(() => {
-        setdata(folder);
+        setData(folder);
     }, [folder]);
+
+    const finalAdd = (parent, value) => {
+        handleAddItems(parent, value);
+        setAddStatus(false); // Close input after adding
+        setInputData(''); // Reset input
+    };
 
     return (
         <div style={{ position: 'relative', marginLeft: '10px' }}>
@@ -15,117 +23,143 @@ const PrintData = ({ folder, handleState, handleDelete }) => {
                     backgroundColor: data.status ? 'grey' : '',
                     borderRadius: '5px',
                     cursor: 'pointer',
-                    position: 'relative',  // Ensuring positioning is relative
-                    left: '10px',  // Corrected from 'Left' to 'left'
-                    top: '10px',  // Optional: add a 'top' offset to move the button down a bit
+                    position: 'relative',
+                    left: '10px',
+                    top: '10px',
                 }}
                 onClick={() => handleState(data.name)}
             >
                 {data.name}
             </button>
 
-            {
-                data.status && (
+            {data.status && (
+                <>
                     <button
                         onClick={() => handleDelete(data.name)}
                         style={{
                             marginLeft: '10px',
                             backgroundColor: 'red',
                             border: 'none',
-                            borderRadius: "10px",
-                            cursor: 'pointer'
+                            borderRadius: '10px',
+                            cursor: 'pointer',
                         }}
                     >
-                        delete
+                        Delete
                     </button>
-                )
-            }
+                    <button
+                        onClick={() => setAddStatus(!addStatus)}
+                        style={{
+                            marginLeft: '10px',
+                            backgroundColor: 'green',
+                            border: 'none',
+                            borderRadius: '10px',
+                            cursor: 'pointer',
+                        }}
+                    >
+                        Add Folder
+                    </button>
+                </>
+            )}
+
+            {addStatus && (
+                <div>
+                    <input
+                        value={inputData}
+                        onChange={(e) => setInputData(e.target.value)}
+                        placeholder="Enter folder name"
+                    />
+                    <button onClick={() => finalAdd(data.name, inputData)}>Add</button>
+                </div>
+            )}
 
             <div>
-                {
-                    data.status && Array.isArray(data.child) && data.child.length > 0 ?
-                        data.child.map((item, index) => {
-                            return <PrintData key={index} folder={item} handleState={handleState} handleDelete={handleDelete} />
-                        }) : null
-                }
+                {data.status &&
+                    Array.isArray(data.child) &&
+                    data.child.length > 0 &&
+                    data.child.map((item, index) => (
+                        <PrintData
+                            key={index}
+                            folder={item}
+                            handleState={handleState}
+                            handleDelete={handleDelete}
+                            handleAddItems={handleAddItems}
+                        />
+                    ))}
             </div>
         </div>
     );
-}
+};
 
 const Folderw = () => {
-    const [data, setdata] = useState([
+    const [data, setData] = useState([
         { name: 'a', status: false, child: [{ name: 'sub a', status: false, child: [] }] },
         { name: 'b', status: false, child: [{ name: 'sub b', status: false, child: [] }] },
         { name: 'c', status: false, child: [{ name: 'sub c', status: false, child: [] }] },
         { name: 'd', status: false, child: [{ name: 'sub d', status: false, child: [] }] },
     ]);
 
-
-
-    console.log(data)
-
     const handleState = (value) => {
         const changeState = (data) => {
-            return data.map((item) => {
-                if (typeof item === 'object') {
-                    return {
-                        ...item,
-                        status: item.name === value ? !item.status : item.status,
-                        child: item.child ? changeState(item.child) : []
-                    };
-                }
-                return item;
-            });
+            return data.map((item) => ({
+                ...item,
+                status: item.name === value ? !item.status : item.status,
+                child: item.child ? changeState(item.child) : [],
+            }));
         };
 
-        setdata(changeState(data));
+        setData(changeState(data));
     };
 
     const handleDelete = (value) => {
-
         const deleteItems = (data) => {
+            return data
+                .filter((item) => item.name !== value)
+                .map((item) => ({
+                    ...item,
+                    child: item.child ? deleteItems(item.child) : [],
+                }));
+        };
+        setData(deleteItems(data));
+    };
 
-            // return data.map((item) => {
-            //     return item.name === value ? data.filter((a) => a.name !== value) : 
-            //     (item.child?.length?{ ...item, child: deleteItems(item.child) }:item)
-            // })
-
-
-            return data.filter((item)=>{
-                return item.name!==value
-            }).map((item)=>{
-                return {...item,child:item.child?deleteItems(item.child):[]}
-            })
-        }
-
-        setdata(deleteItems(data));
-
+    const handleAddItems = (parentName, newFolderName) => {
+        const addItems = (data) => {
+            return data.map((item) => {
+                if (item.name === parentName) {
+                    return {
+                        ...item,
+                        child: [...item.child, { name: newFolderName, status: false, child: [] }],
+                    };
+                } else {
+                    return {
+                        ...item,
+                        child: addItems(item.child),
+                    };
+                }
+            });
+        };
+        setData(addItems(data));
     };
 
     return (
         <div>
             <h1>Folder Structure</h1>
-
-            {
-                data.map((item, index) => {
-                    return (
-                        <div key={index}>
-                            {
-                                typeof item === 'object' ?
-                                    <PrintData
-                                        folder={item}
-                                        handleState={handleState}
-                                        handleDelete={handleDelete}
-                                    /> :
-                                    <p>{item}</p>
-                            }
-                        </div>
-                    );
-                })
-            }
+            {data.map((item, index) => (
+                <div key={index}>
+                    {typeof item === 'object' ? (
+                        <PrintData
+                            folder={item}
+                            handleState={handleState}
+                            handleDelete={handleDelete}
+                            handleAddItems={handleAddItems}
+                        />
+                    ) : (
+                        <p>{item}</p>
+                    )}
+                </div>
+            ))}
         </div>
     );
-}
+};
 
 export default Folderw;
