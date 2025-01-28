@@ -1,75 +1,111 @@
+import React, { useEffect, useState } from 'react';
 
+const PrintData = ({ folder, handleState, handleDelete }) => {
+    const [data, setdata] = useState('');
 
+    useEffect(() => {
+        setdata(folder);
+    }, [folder]);
 
+    return (
+        <div style={{position:'relative',marginLeft:'10px'}}>
+            <button
+                style={{
+                    width: '100px',
+                    backgroundColor: data.status ? 'grey' : '',
+                    borderRadius: '5px',
+                    cursor: 'pointer',
+                    position: 'relative',  // Ensuring positioning is relative
+                    left: '10px',  // Corrected from 'Left' to 'left'
+                    top: '10px',  // Optional: add a 'top' offset to move the button down a bit
+                }}
+                onClick={() => handleState(data.name)}
+            >
+                {data.name}
+            </button>
 
+            {
+                data.status && (
+                    <button 
+                        onClick={() => handleDelete(data.name)} 
+                        style={{
+                            marginLeft: '10px', 
+                            backgroundColor: 'red',
+                            border: 'none', 
+                            borderRadius: "10px", 
+                            cursor: 'pointer'
+                        }}
+                    >
+                        delete
+                    </button>
+                )
+            }
 
-import React, { useEffect } from 'react';
-import{useState}  from 'react';
-
-const PrintData=({folder,handleState})=>{
-    const[data,setdata]=useState('');
-
-    useEffect(()=>{
-          setdata(folder)
-    },[folder]);
-
-     return(
-       <div>
-           <button onClick={()=>handleState(data.name)}>{data.name}</button>
-       </div>
-     )
+            <div>
+                {
+                    data.status && Array.isArray(data.child) && data.child.length > 0 ? 
+                        data.child.map((item, index) => {
+                            return <PrintData  key={index} folder={item} handleState={handleState} handleDelete={handleDelete} />
+                        }) : null
+                }
+            </div>
+        </div>
+    );
 }
 
 const Folderw = () => {
+    const [data, setdata] = useState([
+        { name: 'a', status: false, child: [{ name: 'sub a', status: false, child: [] }] },
+        { name: 'b', status: false, child: [{ name: 'sub b', status: false, child: [] }] },
+        { name: 'c', status: false, child: [{ name: 'sub c', status: false, child: [] }] },
+        { name: 'd', status: false, child: [{ name: 'sub d', status: false, child: [] }] },
+    ]);
 
-      const [data, setdata] = useState([
-        { name: 'a', status: false, child: [{name:'sub a',status:false,child:[]},"sanket"] },
-        { name: 'b', status: false, child: [] },
-        { name: 'c', status: false, child: [] },
-        { name: 'd', status: false, child: [] },
-        'aniket.txt'
-        ])
+    const handleState = (value) => {
+        const changeState = (data) => {
+            return data.map((item) => {
+                if (typeof item === 'object') {
+                    return {
+                        ...item,
+                        status: item.name === value ? !item.status : item.status,
+                        child: item.child ? changeState(item.child) : []
+                    };
+                }
+                return item;
+            });
+        };
 
+        setdata(changeState(data));
+    };
 
+    const handleDelete = (value) => {
+        // Handle delete logic here
+        console.log(`Delete item: ${value}`);
+    };
 
-        const handleState=(value)=>{
-            console.log("this is value",value)
-        }
+    return (
+        <div>
+            <h1>Folder Structure</h1>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  return (
-    <div>
-        <h1>folder struture </h1>
-
-        {
-            data.map((item,index)=>{
-                return <div key={index}>
-                    {
-                        typeof item==='object'?<PrintData folder={item} handleState={handleState}/>:<p>{item}</p>
-                    }
-                    </div>
-            })
-        }
-      
-    </div>
-  )
+            {
+                data.map((item, index) => {
+                    return (
+                        <div key={index}>
+                            {
+                                typeof item === 'object' ? 
+                                    <PrintData 
+                                        folder={item} 
+                                        handleState={handleState} 
+                                        handleDelete={handleDelete} 
+                                    /> : 
+                                    <p>{item}</p>
+                            }
+                        </div>
+                    );
+                })
+            }
+        </div>
+    );
 }
 
-export default Folderw
-
-
-
-
+export default Folderw;
