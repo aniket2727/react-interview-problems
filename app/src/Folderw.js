@@ -8,7 +8,7 @@ const PrintData = ({ folder, handleState, handleDelete }) => {
     }, [folder]);
 
     return (
-        <div style={{position:'relative',marginLeft:'10px'}}>
+        <div style={{ position: 'relative', marginLeft: '10px' }}>
             <button
                 style={{
                     width: '100px',
@@ -26,13 +26,13 @@ const PrintData = ({ folder, handleState, handleDelete }) => {
 
             {
                 data.status && (
-                    <button 
-                        onClick={() => handleDelete(data.name)} 
+                    <button
+                        onClick={() => handleDelete(data.name)}
                         style={{
-                            marginLeft: '10px', 
+                            marginLeft: '10px',
                             backgroundColor: 'red',
-                            border: 'none', 
-                            borderRadius: "10px", 
+                            border: 'none',
+                            borderRadius: "10px",
                             cursor: 'pointer'
                         }}
                     >
@@ -43,9 +43,9 @@ const PrintData = ({ folder, handleState, handleDelete }) => {
 
             <div>
                 {
-                    data.status && Array.isArray(data.child) && data.child.length > 0 ? 
+                    data.status && Array.isArray(data.child) && data.child.length > 0 ?
                         data.child.map((item, index) => {
-                            return <PrintData  key={index} folder={item} handleState={handleState} handleDelete={handleDelete} />
+                            return <PrintData key={index} folder={item} handleState={handleState} handleDelete={handleDelete} />
                         }) : null
                 }
             </div>
@@ -60,6 +60,10 @@ const Folderw = () => {
         { name: 'c', status: false, child: [{ name: 'sub c', status: false, child: [] }] },
         { name: 'd', status: false, child: [{ name: 'sub d', status: false, child: [] }] },
     ]);
+
+
+
+    console.log(data)
 
     const handleState = (value) => {
         const changeState = (data) => {
@@ -79,8 +83,24 @@ const Folderw = () => {
     };
 
     const handleDelete = (value) => {
-        // Handle delete logic here
-        console.log(`Delete item: ${value}`);
+
+        const deleteItems = (data) => {
+
+            // return data.map((item) => {
+            //     return item.name === value ? data.filter((a) => a.name !== value) : 
+            //     (item.child?.length?{ ...item, child: deleteItems(item.child) }:item)
+            // })
+
+
+            return data.filter((item)=>{
+                return item.name!==value
+            }).map((item)=>{
+                return {...item,child:item.child?deleteItems(item.child):[]}
+            })
+        }
+
+        setdata(deleteItems(data));
+
     };
 
     return (
@@ -92,12 +112,12 @@ const Folderw = () => {
                     return (
                         <div key={index}>
                             {
-                                typeof item === 'object' ? 
-                                    <PrintData 
-                                        folder={item} 
-                                        handleState={handleState} 
-                                        handleDelete={handleDelete} 
-                                    /> : 
+                                typeof item === 'object' ?
+                                    <PrintData
+                                        folder={item}
+                                        handleState={handleState}
+                                        handleDelete={handleDelete}
+                                    /> :
                                     <p>{item}</p>
                             }
                         </div>
