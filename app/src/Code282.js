@@ -2,25 +2,35 @@ import React from 'react'
 
 const Code282 = () => {
 
-    let data=10;
+    // let data=10;
 
-    const a=()=>{
-        data=20;
-       function printdata(){
-        console.log("the data is",data)
-        data=30
-       }
+    let n = new Map([
+        ["name", "aniket"],
+        ["age", "kadam"]
+    ]);
 
-       printdata()
+    if (n.has("name")) {
+        console.log("The value of name is", n.get("name"));
     }
 
-    a();
-    
-  return (
-    <div>
-      
-    </div>
-  )
+    // const a=()=>{
+    //     data=20;
+    //    function printdata(){
+    //     console.log("the data is",data)
+    //     data=30
+    //    }
+
+    //    printdata()
+    // }
+
+    // a();
+
+
+    return (
+        <div>
+
+        </div>
+    )
 }
 
 export default Code282
