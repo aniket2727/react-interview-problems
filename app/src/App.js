@@ -256,10 +256,13 @@ import Code278 from "./Code278.js";
 import Code279 from "./Code279.js";
 import Code280f1 from "./Code280.js";
 import Folderw from "./Folderw.js";
+import Code282 from "./Code282.js";
+
+
 function App() {
   return (
     <div>
-        <Folderw/>
+        <Code282/>
     </div>
   );
 }
