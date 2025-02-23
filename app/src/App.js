@@ -257,12 +257,13 @@ import Code279 from "./Code279.js";
 import Code280f1 from "./Code280.js";
 import Folderw from "./Folderw.js";
 import Code282 from "./Code282.js";
-
+import Code283 from "./Code283.js";
+//import Code284 from "./Code284.js"
 
 function App() {
   return (
     <div>
-        <Code282/>
+        <Code283/>
     </div>
   );
 }

@@ -23,13 +23,13 @@ const Code282 = () => {
     //    printdata()
     // }
 
+
     // a();
 
 
     return (
         <div>
-
-        </div>
+                aniket kdddddddda   </div>
     )
 }
 
