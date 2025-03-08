@@ -4,6 +4,7 @@ const Code301 = () => {
   return (
     <div>
       <h1>Add code by aniket kadam</h1>
+      <h1>this code is added by adesh pai</h1>
     </div>
   )
 }
